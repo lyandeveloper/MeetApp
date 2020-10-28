@@ -34,7 +34,7 @@
 
 ## 💻 Project
 
-Zoom Clone video conference made with NodeJS.<br>
+MeetApp is a video conference made with NodeJS.<br>
 
 ## Technology
 
