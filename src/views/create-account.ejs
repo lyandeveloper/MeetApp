@@ -1,11 +1,11 @@
 <%- contentFor('body') %>
 
 <section class="form">
-  <form action="">
+  <form action="/signUp" method="post">
     <label>MeetApp</label>
-    <input type="text" placeholder="Nome de Usuário" />
-    <input type="text" placeholder="Email" />
-    <input type="password" placeholder="Senha" />
+    <input type="text" name="name" placeholder="Nome de Usuário" />
+    <input type="text" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Senha" />
 
     <button type="submit">Criar Conta</button>
     <a href="/">Já tenho uma conta</a>

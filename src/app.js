@@ -1,8 +1,15 @@
+require('dotenv/config');
+require('./database');
 const express = require('express');
+const redis = require('redis');
 const routes = require('./routes');
 const cors = require('cors');
 const path = require('path');
+const session = require('express-session');
 const expressLayouts = require('express-ejs-layouts');
+
+const RedisStore = require('connect-redis')(session);
+const redisClient = redis.createClient();
 
 class App {
   constructor() {
@@ -13,6 +20,15 @@ class App {
 
   middlewares() {
     this.server.use(cors());
+    this.server.use(express.urlencoded({ extended: false }));
+    this.server.use(
+      session({
+        store: new RedisStore({ client: redisClient }),
+        secret: process.env.APP_SECRET,
+        resave: false,
+        saveUninitialized: false,
+      })
+    );
     this.server.use(express.static(path.join(__dirname, 'public')));
     this.server.use(expressLayouts);
     this.server.set('views', path.join(__dirname, 'views'));

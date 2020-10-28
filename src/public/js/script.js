@@ -40,8 +40,9 @@ navigator.mediaDevices
       }
     });
     socket.on('createMessage', (message) => {
-      $('ul').append(`<li class="message"><b>user</b><br/>${message}</li>`);
-      scrollToBottom();
+      $('ul').append(
+        `<li class="message"><b>${username}</b><br/>${message}</li>`
+      );
     });
   });
 
