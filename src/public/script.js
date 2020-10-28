@@ -1,10 +1,9 @@
 const socket = io('/');
 const videoGrid = document.getElementById('video-grid');
 const myPeer = new Peer(undefined, {
-  path: 'powerful-ocean-23749.herokuapp.com',
+  path: '/',
   host: 'powerful-ocean-23749.herokuapp.com',
   port: '443',
-  key: 'peerjs',
   debug: 3,
 });
 let myVideoStream;
