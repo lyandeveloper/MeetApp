@@ -17,6 +17,7 @@ route.get('/room', (req, res) => {
 });
 
 route.get('/room/:room', (req, res) => {
+  console.log(req.session.user);
   res.render('room', { roomId: req.params.room, user: req.session.user.name });
 });
 
