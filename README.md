@@ -1,5 +1,5 @@
 <h1 align="center">
-  Zoom Clone
+  MeetApp
 </h1>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 ## 💻 Project
 
-Zoom Clone video conference made with NodeJS.<br>
+MeetApp is a video conference made with NodeJS.<br>
 
 ## Technology
 
