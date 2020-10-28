@@ -107,7 +107,8 @@ video {
 }
 
 .leave_meeting {
-  color: #eb534b;
+  color: #eb534b !important;
+  text-decoration: none !important;
 }
 
 .unmute,

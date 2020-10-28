@@ -27,7 +27,11 @@
     "uuid": "^8.3.0"
   },
   "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.4",
+    "prettier": "^2.1.2",
     "sequelize-cli": "^6.2.0"
   }
 }
