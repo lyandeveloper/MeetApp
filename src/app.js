@@ -15,6 +15,7 @@ class App {
 
   middlewares() {
     this.server.use(cors());
+    this.server.use(express.urlencoded({ extended: false }));
     this.server.use(express.static(path.join(__dirname, 'public')));
     this.server.use(expressLayouts);
     this.server.set('views', path.join(__dirname, 'views'));
