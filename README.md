@@ -3,16 +3,16 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lyandeveloper/Zoom-Clone">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lyandeveloper/MeetApp">
   
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/top/lyandeveloper/Zoom-Clone">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/top/lyandeveloper/MeetApp">
 
-  <a href="https://github.com/lyandeveloper/Zoom-Clone/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lyandeveloper/Zoom-Clone">
+  <a href="https://github.com/lyandeveloper/MeetApp/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lyandeveloper/MeetApp">
   </a>
 
-  <a href="https://github.com/lyandeveloper/Zoom-Clone/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/lyandeveloper/Zoom-Clone">
+  <a href="https://github.com/lyandeveloper/MeetApp/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/lyandeveloper/MeetApp">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
