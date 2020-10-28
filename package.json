@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "peer": "peerjs --port 3001",
     "start": "node server.js"
   },
   "keywords": [],
