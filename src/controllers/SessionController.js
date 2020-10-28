@@ -20,7 +20,7 @@ class SessionController {
       return res.redirect('/');
     }
 
-    console.log(user);
+    req.session.user = user;
 
     return res.redirect('/room');
   }

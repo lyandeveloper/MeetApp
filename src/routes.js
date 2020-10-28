@@ -17,7 +17,7 @@ route.get('/room', (req, res) => {
 });
 
 route.get('/room/:room', (req, res) => {
-  res.render('room', { roomId: req.params.room });
+  res.render('room', { roomId: req.params.room, user: req.session.user.name });
 });
 
 module.exports = route;
