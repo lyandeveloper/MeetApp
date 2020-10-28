@@ -1,6 +1,13 @@
 const app = require('./app');
+const { ExpressPeerServer } = require('peer');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+
+const peerServer = ExpressPeerServer(server, {
+  debug: true,
+});
+
+app.use('/peerjs', peerServer);
 
 io.on('connection', (socket) => {
   socket.on('join-room', (roomId, userId) => {
