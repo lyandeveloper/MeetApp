@@ -7,6 +7,10 @@ route.get('/', (req, res) => {
   res.render('login');
 });
 
+route.get('/signUp', (req, res) => {
+  res.render('create-account');
+});
+
 route.get('/room', (req, res) => {
   res.redirect(`/room/${uuidV4()}`);
 });
