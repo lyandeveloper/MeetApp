@@ -1,0 +1,27 @@
+<%- contentFor('body') %>
+<section class="welcome">
+  <header>
+    <h1>Bem-Vindo <%-username%></h1>
+    <a href="/welcome/loggout" class="logout">Sair</a>
+  </header>
+
+  <table>
+    <h2>Suas salas</h2>
+    <tr>
+      <th>Nome</th>
+      <th>Id</th>
+      <th>Ação</th>
+    </tr>
+
+    <tr>
+      <td><a href="">Programadores BR</a></td>
+      <td>dsiosuajdslkd98032390ds</td>
+      <td>Excluir</td>
+    </tr>
+  </table>
+
+  <div class="buttons">
+    <a href="/welcome/create-room">Criar uma sala</a>
+    <a href="/welcome/load-room">Entrar em uma sala</a>
+  </div>
+</section>
