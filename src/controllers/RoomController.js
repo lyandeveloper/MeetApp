@@ -13,6 +13,7 @@ class RoomController {
     await Room.create({
       name: name,
       room_id: roomId,
+      user_id: req.session.user.id,
     });
 
     return res.redirect(`/room/${roomId}`);

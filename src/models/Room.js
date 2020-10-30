@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-const bcrypt = require('bcryptjs');
 const { Model } = require('sequelize');
 
 class Room extends Model {
@@ -15,6 +14,10 @@ class Room extends Model {
     );
 
     return this;
+  }
+
+  static associate(models) {
+    this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
   }
 }
 
