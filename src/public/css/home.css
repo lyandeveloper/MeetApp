@@ -1,0 +1,41 @@
+section.welcome {
+  padding: 20px;
+}
+
+section.welcome h1,
+h2 {
+  color: white;
+  margin-top: 10px;
+}
+
+section.welcome header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  margin-top: 20px;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+section.welcome .buttons {
+  margin-top: 20px;
+}
+
+section.welcome a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: palevioletred;
+  color: white;
+}

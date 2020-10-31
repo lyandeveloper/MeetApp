@@ -22,7 +22,14 @@ class SessionController {
 
     req.session.user = user;
 
-    return res.redirect('/room');
+    return res.redirect('/welcome');
+  }
+
+  destroy(req, res) {
+    req.session.destroy(() => {
+      res.clearCookie('client');
+      return res.redirect('/');
+    });
   }
 }
 
