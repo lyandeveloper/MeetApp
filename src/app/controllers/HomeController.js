@@ -1,6 +1,13 @@
+const Room = require('../models/Room');
+
 class HomeController {
   async create(req, res) {
-    return res.render('home', { username: req.session.user.name });
+    const rooms = await Room.findAll({
+      where: {
+        user_id: req.session.user.id,
+      },
+    });
+    return res.render('home', { username: req.session.user.name, rooms });
   }
 }
 
