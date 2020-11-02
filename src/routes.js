@@ -27,8 +27,6 @@ route.get('/welcome', (req, res) => {
 route.get('/welcome/create-room', RoomController.create);
 route.post('/welcome/create-room', RoomController.store);
 
-route.get('/room/:room', (req, res) => {
-  res.render('room', { roomId: req.params.room, user: req.session.user.name });
-});
+route.get('/room/:roomId', RoomController.index);
 
 module.exports = route;

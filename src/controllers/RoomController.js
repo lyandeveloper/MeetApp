@@ -6,6 +6,26 @@ class RoomController {
     return res.render('create-room');
   }
 
+  async index(req, res) {
+    const { roomId } = req.params;
+    const findExistRooms = await Room.findOne({
+      where: {
+        room_id: roomId,
+      },
+    });
+
+    if (!findExistRooms) {
+      return res.status(404).send('Live id not found');
+    }
+
+    console.log(findExistRooms);
+
+    return res.render('room', {
+      roomId: req.params.roomId,
+      user: req.session.user.name,
+    });
+  }
+
   async store(req, res) {
     const roomId = uuidV4();
     const { name } = req.body;
