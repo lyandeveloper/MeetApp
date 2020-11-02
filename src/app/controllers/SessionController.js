@@ -22,7 +22,7 @@ class SessionController {
 
     req.session.user = user;
 
-    return res.redirect('/welcome');
+    return res.redirect('/home');
   }
 
   destroy(req, res) {

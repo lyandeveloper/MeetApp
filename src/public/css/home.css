@@ -1,17 +1,20 @@
 section.welcome {
-  padding: 20px;
+  background: #eee;
+  height: 100vh;
 }
 
 section.welcome h1,
 h2 {
   color: white;
-  margin-top: 10px;
 }
 
 section.welcome header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #4b4980;
+  padding: 10px;
+  color: white;
 }
 
 .welcome table {
@@ -19,13 +22,14 @@ section.welcome header {
   width: 100%;
   background: white;
   margin-top: 20px;
+  padding: 10px;
 }
 
 td,
 th {
   text-align: left;
   padding: 8px;
-  border: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 
 section.welcome .buttons {
@@ -36,6 +40,14 @@ section.welcome a {
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 4px;
-  background: palevioletred;
+  background: #4b4980;
   color: white;
+}
+
+section.table {
+  padding: 10px;
+}
+
+#page-title {
+  color: #222;
 }
