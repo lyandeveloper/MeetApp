@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
-const User = require('../models/User');
+const User = require('../app/models/User');
 
 const databaseConfig = require('../config/database');
-const Room = require('../models/Room');
+const Room = require('../app/models/Room');
 
 const models = [User, Room];
 

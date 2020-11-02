@@ -13,11 +13,13 @@
       <th>Ação</th>
     </tr>
 
+    <% rooms.forEach(room => {%>
     <tr>
-      <td><a href="">Programadores BR</a></td>
-      <td>dsiosuajdslkd98032390ds</td>
+      <td><a href="/room/<%= room.room_id %>"><%= room.name %></a></td>
+      <td><%= room.room_id %></td>
       <td>Excluir</td>
     </tr>
+    <% }); %>
   </table>
 
   <div class="buttons">

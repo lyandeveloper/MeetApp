@@ -1,12 +1,13 @@
 const { Router } = require('express');
 const { v4: uuidV4 } = require('uuid');
 
-const UserController = require('./controllers/UserController');
-const SessionController = require('./controllers/SessionController');
-const RoomController = require('./controllers/RoomController');
+const UserController = require('./app/controllers/UserController');
+const SessionController = require('./app/controllers/SessionController');
+const RoomController = require('./app/controllers/RoomController');
 
-const AuthMiddleware = require('./middlewares/auth');
-const AppMiddleware = require('./middlewares/appAuth');
+const AuthMiddleware = require('./app/middlewares/auth');
+const AppMiddleware = require('./app/middlewares/appAuth');
+const HomeController = require('./app/controllers/HomeController');
 
 const route = Router();
 
@@ -20,15 +21,11 @@ route.get('/welcome/loggout', SessionController.destroy);
 route.get('/signUp', AppMiddleware, UserController.create);
 route.post('/signUp', UserController.store);
 
-route.get('/welcome', (req, res) => {
-  res.render('home', { username: req.session.user.name });
-});
+route.get('/home', HomeController.create);
 
-route.get('/welcome/create-room', RoomController.create);
-route.post('/welcome/create-room', RoomController.store);
+route.get('/home/create-room', RoomController.create);
+route.post('/home/create-room', RoomController.store);
 
-route.get('/room/:room', (req, res) => {
-  res.render('room', { roomId: req.params.room, user: req.session.user.name });
-});
+route.get('/room/:roomId', RoomController.index);
 
 module.exports = route;

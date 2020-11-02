@@ -3,5 +3,5 @@ module.exports = (req, res, next) => {
     return next();
   }
 
-  return res.redirect('/welcome');
+  return res.redirect('/home');
 };
