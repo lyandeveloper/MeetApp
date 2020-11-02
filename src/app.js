@@ -32,7 +32,7 @@ class App {
     );
     this.server.use(express.static(path.join(__dirname, 'public')));
     this.server.use(expressLayouts);
-    this.server.set('views', path.join(__dirname, 'views'));
+    this.server.set('views', path.join(__dirname, 'app', 'views'));
     this.server.set('view engine', 'ejs');
   }
 

@@ -1,12 +1,12 @@
 const { Router } = require('express');
 const { v4: uuidV4 } = require('uuid');
 
-const UserController = require('./controllers/UserController');
-const SessionController = require('./controllers/SessionController');
-const RoomController = require('./controllers/RoomController');
+const UserController = require('./app/controllers/UserController');
+const SessionController = require('./app/controllers/SessionController');
+const RoomController = require('./app/controllers/RoomController');
 
-const AuthMiddleware = require('./middlewares/auth');
-const AppMiddleware = require('./middlewares/appAuth');
+const AuthMiddleware = require('./app/middlewares/auth');
+const AppMiddleware = require('./app/middlewares/appAuth');
 
 const route = Router();
 
