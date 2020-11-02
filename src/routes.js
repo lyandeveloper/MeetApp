@@ -7,6 +7,7 @@ const RoomController = require('./app/controllers/RoomController');
 
 const AuthMiddleware = require('./app/middlewares/auth');
 const AppMiddleware = require('./app/middlewares/appAuth');
+const HomeController = require('./app/controllers/HomeController');
 
 const route = Router();
 
@@ -20,12 +21,10 @@ route.get('/welcome/loggout', SessionController.destroy);
 route.get('/signUp', AppMiddleware, UserController.create);
 route.post('/signUp', UserController.store);
 
-route.get('/welcome', (req, res) => {
-  res.render('home', { username: req.session.user.name });
-});
+route.get('/home', HomeController.create);
 
-route.get('/welcome/create-room', RoomController.create);
-route.post('/welcome/create-room', RoomController.store);
+route.get('/home/create-room', RoomController.create);
+route.post('/home/create-room', RoomController.store);
 
 route.get('/room/:roomId', RoomController.index);
 
