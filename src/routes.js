@@ -12,11 +12,11 @@ const HomeController = require('./app/controllers/HomeController');
 const route = Router();
 
 route.use('/room', AuthMiddleware);
-route.use('/welcome', AuthMiddleware);
+route.use('/home', AuthMiddleware);
 
 route.get('/', AppMiddleware, SessionController.create);
 route.post('/', SessionController.store);
-route.get('/welcome/loggout', SessionController.destroy);
+route.get('/home/loggout', SessionController.destroy);
 
 route.get('/signUp', AppMiddleware, UserController.create);
 route.post('/signUp', UserController.store);
@@ -25,6 +25,11 @@ route.get('/home', HomeController.create);
 
 route.get('/home/create-room', RoomController.create);
 route.post('/home/create-room', RoomController.store);
+
+route.get('/home/load-room', RoomController.renderLoadRoom);
+route.post('/home/load-room', RoomController.loadRoom);
+
+route.get('/home/delete/:roomId', RoomController.delete);
 
 route.get('/room/:roomId', RoomController.index);
 
