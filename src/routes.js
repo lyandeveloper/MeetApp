@@ -12,11 +12,11 @@ const HomeController = require('./app/controllers/HomeController');
 const route = Router();
 
 route.use('/room', AuthMiddleware);
-route.use('/welcome', AuthMiddleware);
+route.use('/home', AuthMiddleware);
 
 route.get('/', AppMiddleware, SessionController.create);
 route.post('/', SessionController.store);
-route.get('/welcome/loggout', SessionController.destroy);
+route.get('/home/loggout', SessionController.destroy);
 
 route.get('/signUp', AppMiddleware, UserController.create);
 route.post('/signUp', UserController.store);
