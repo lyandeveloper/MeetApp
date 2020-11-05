@@ -29,6 +29,8 @@ route.post('/home/create-room', RoomController.store);
 route.get('/home/load-room', RoomController.renderLoadRoom);
 route.post('/home/load-room', RoomController.loadRoom);
 
+route.get('/home/delete/:roomId', RoomController.delete);
+
 route.get('/room/:roomId', RoomController.index);
 
 module.exports = route;

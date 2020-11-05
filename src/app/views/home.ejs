@@ -21,7 +21,13 @@
       <tr>
         <td><a href="/room/<%= room.room_id %>"><%= room.name %></a></td>
         <td><%= room.room_id %></td>
-        <td>Excluir</td>
+        <td>
+          <a
+            href="/home/delete/<%= room.room_id %>"
+            style="background-color: red"
+            >Excluir</a
+          >
+        </td>
       </tr>
       <% }); %>
     </table>
