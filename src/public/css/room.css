@@ -49,8 +49,8 @@ video {
 }
 
 .main__right {
-  background-color: #242324;
-  border-left: 1px solid #3d3d42;
+  background-color: rgb(6, 21, 48);
+  border-left: 1px solid #0d0d20;
 }
 
 .main__controls {
