@@ -24,6 +24,8 @@ video {
 .main {
   height: 100vh;
   display: flex;
+
+  background-color: rgb(3, 12, 29);
 }
 
 .main__left {
@@ -40,15 +42,10 @@ video {
 
 .main__videos {
   flex-grow: 1;
-  background-color: rgb(3, 12, 29);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
-}
-
-.main__controls {
-  background-color: #1c1e20;
 }
 
 .main__right {
@@ -59,7 +56,7 @@ video {
 .main__controls {
   color: #d2d2d2;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 5px;
 }
 
@@ -72,18 +69,21 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8px 10px;
-  min-width: 80px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 20px;
 }
 
 .main__controls__button:hover {
-  background-color: #343434;
-  border-radius: 5px;
+  background-color: #ccc;
 }
 
 .main__controls__button i {
   font-size: 24px;
+  color: #555;
 }
 
 .main__right {
