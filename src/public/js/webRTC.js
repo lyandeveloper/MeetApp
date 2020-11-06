@@ -12,7 +12,11 @@ const peers = {};
 
 navigator.mediaDevices
   .getUserMedia({
-    video: true,
+    video: {
+      deviceId: {
+        exact: window.selectedCamera,
+      },
+    },
     audio: true,
   })
   .then((stream) => {
@@ -101,32 +105,4 @@ const playStop = () => {
     setStopVideo();
     myVideoStream.getVideoTracks()[0].enabled = true;
   }
-};
-
-const setMuteButton = () => {
-  const html = `
-    <i class="fas fa-microphone"></i> 
-  `;
-  document.querySelector('.main__mute_button').innerHTML = html;
-};
-
-const setUnmuteButton = () => {
-  const html = `
-    <i class="unmute fas fa-microphone-slash"  style="color: red"></i> 
-  `;
-  document.querySelector('.main__mute_button').innerHTML = html;
-};
-
-const setStopVideo = () => {
-  const html = `
-    <i class="fas fa-video"></i> 
-  `;
-  document.querySelector('.main__video_button').innerHTML = html;
-};
-
-const setPlayVideo = () => {
-  const html = `
-  <i class="stop fas fa-video-slash" style="color: red"></i> 
-  `;
-  document.querySelector('.main__video_button').innerHTML = html;
 };
