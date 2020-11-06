@@ -16,12 +16,13 @@ video {
 }
 
 .main__left {
-  flex: 0.8;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .main__right {
+  display: none;
   flex: 0.2;
 }
 
@@ -74,7 +75,7 @@ video {
 }
 
 .main__right {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
