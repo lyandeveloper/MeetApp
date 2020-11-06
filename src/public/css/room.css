@@ -3,9 +3,20 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
 video {
   height: 300px;
   width: 400px;
+  object-fit: cover;
+  padding: 8px;
+}
+
+#user-video {
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+  height: 200px;
+  width: 300px;
   object-fit: cover;
   padding: 8px;
 }
@@ -24,11 +35,12 @@ video {
 .main__right {
   display: none;
   flex: 0.2;
+  padding: 10px;
 }
 
 .main__videos {
   flex-grow: 1;
-  background-color: black;
+  background-color: rgb(3, 12, 29);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,8 +6,8 @@ const myPeer = new Peer(undefined, {
   debug: 3,
 });
 let myVideoStream;
-const myVideo = document.createElement('video');
-myVideo.muted = true;
+const userVideo = document.getElementById('user-video');
+userVideo.muted = true;
 const peers = {};
 
 navigator.mediaDevices
@@ -17,7 +17,7 @@ navigator.mediaDevices
   })
   .then((stream) => {
     myVideoStream = stream;
-    addVideoStream(myVideo, stream);
+    addVideoStream(userVideo, stream);
 
     myPeer.on('call', (call) => {
       call.answer(stream);
