@@ -22,7 +22,6 @@
   </a>
 </p>
 
-<img src="Hnet-image.gif">
 
 <p align="center">
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -42,7 +41,7 @@ On MeetApp you can create rooms, also you can copy the room ID and share with pe
 <img src=".github/gif1.gif">
 <br/>
 
-Also you have a chat where you can send messages to your friends.
+Also you have a chat where you can send messages to your friends.<br/>
 <img src=".github/gif2.gif">
 <br/>
 
