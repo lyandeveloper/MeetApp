@@ -12,11 +12,7 @@ const peers = {};
 
 navigator.mediaDevices
   .getUserMedia({
-    video: {
-      deviceId: {
-        exact: window.selectedCamera,
-      },
-    },
+    video: true,
     audio: true,
   })
   .then((stream) => {
