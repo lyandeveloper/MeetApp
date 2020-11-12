@@ -1,0 +1,40 @@
+<%- contentFor('body') %>
+<section class="welcome">
+  <header>
+    <h1>MeetApp</h1>
+    <div class="profile">
+      <span><%- username %> </span>
+      <a href="/home/loggout" class="logout">Sair</a>
+    </div>
+  </header>
+
+  <section class="table">
+    <h2 id="page-title">Suas salas</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Id</th>
+        <th>Ação</th>
+      </tr>
+
+      <% rooms.forEach(room => {%>
+      <tr>
+        <td><a href="/room/<%= room.room_id %>"><%= room.name %></a></td>
+        <td><%= room.room_id %></td>
+        <td>
+          <a
+            href="/home/delete/<%= room.room_id %>"
+            style="background-color: red"
+            >Excluir</a
+          >
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+
+    <div class="buttons">
+      <a href="/home/create-room" data-lity>Criar uma sala</a>
+      <a href="/home/load-room">Entrar em uma sala</a>
+    </div>
+  </section>
+</section>

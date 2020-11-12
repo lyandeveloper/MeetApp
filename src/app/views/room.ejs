@@ -6,6 +6,7 @@
 
     <script>
       const ROOM_ID = '<%= roomId %>';
+      const username = '<%= user %>';
     </script>
 
     <link
@@ -33,8 +34,8 @@
     ></script>
     <link rel="stylesheet" href="/css/room.css" />
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
-    <script src="/js/script.js" defer></script>
-
+    <script src="/js/webRTC.js" defer></script>
+    <script src="/js/buttons.js" defer></script>
     <title>MeetApp - Conference</title>
   </head>
   <body>
@@ -42,41 +43,29 @@
       <div class="main__left">
         <div class="main__videos">
           <div id="video-grid"></div>
+          <video src="" id="user-video"></video>
         </div>
         <div class="main__controls">
           <div class="main__controls__block">
-            <div
-              onclick="muteUnmute()"
-              class="main__controls__button main__mute_button"
+            <div class="main__controls__button">
+              <div onclick="playStop()" class="main__video_button">
+                <i class="fas fa-video"></i>
+              </div>
+            </div>
+            <div onclick="muteUnmute()" class="main__controls__button">
+              <div class="main__mute_button">
+                <i class="fas fa-microphone"></i>
+              </div>
+            </div>
+            <a
+              href="/home"
+              class="main__controls__button"
+              style="background: red"
             >
-              <i class="fas fa-microphone"></i>
-              <span>Mute</span>
-            </div>
-            <div
-              onclick="playStop()"
-              class="main__controls__button main__video_button"
-            >
-              <i class="fas fa-video"></i>
-              <span>Stop Video</span>
-            </div>
-          </div>
-          <div class="main__controls__block">
-            <div class="main__controls__button">
-              <i class="fas fa-shield-alt"></i>
-              <span>Security</span>
-            </div>
-            <div class="main__controls__button">
-              <i class="fas fa-user-friends"></i>
-              <span>Participants</span>
-            </div>
-            <div class="main__controls__button">
+              <i class="fas fa-phone" style="color: white"></i>
+            </a>
+            <div class="main__controls__button" id="chat">
               <i class="fas fa-comment-alt"></i>
-              <span>Chat</span>
-            </div>
-          </div>
-          <div class="main__controls__block">
-            <div class="main__controls__button">
-              <span class="leave_meeting">Leave Meeting</span>
             </div>
           </div>
         </div>

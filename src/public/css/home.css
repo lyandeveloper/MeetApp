@@ -1,0 +1,53 @@
+section.welcome {
+  background: #eee;
+  height: 100vh;
+}
+
+section.welcome h1,
+h2 {
+  color: white;
+}
+
+section.welcome header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4b4980;
+  padding: 10px;
+  color: white;
+}
+
+.welcome table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  border-left: 1px solid #ccc;
+}
+
+section.welcome .buttons {
+  margin-top: 20px;
+}
+
+section.welcome a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #4b4980;
+  color: white;
+}
+
+section.table {
+  padding: 10px;
+}
+
+#page-title {
+  color: #222;
+}
