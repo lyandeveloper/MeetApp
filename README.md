@@ -55,9 +55,13 @@ This project was developed with the following technologies:
 - [SocketIO](https://socket.io/)
 
 ## :arrow_forward: How to run
-
-- In your terminal run `yarn or npm` to install dependencies
-- Run `yarn dev or npx dev` to start the server then run `yarn peer or npx peer` to start peer server.
+- Fork the project and clone
+- In your project folder, open your terminal and run `yarn install or npm install` to install dependencies
+- Be sure that you have Postgres installed
+- Then in your project folder copy the `.env.example` content, and create a `.env` file then paste the content.
+- Create a new database with wherever name you want, then fill the `.env` file with required fields.
+- In your terminal run `yarn sequelize db:migrate` or `npm sequelize db:migrate` to run the database migrations.
+- Then run `yarn dev or npm dev` to start the server and in another terminal run `yarn peer or npm peer` to start peer server.
 
 If all goes well, the backend of application will be available at: **http://localhost:3000**
 
