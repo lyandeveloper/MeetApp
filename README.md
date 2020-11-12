@@ -34,6 +34,8 @@
 ## 💻 Project
 
 MeetApp is a video conference made with NodeJS.<br>
+<<<<<<< HEAD
+=======
 
 # Features
 
@@ -45,6 +47,8 @@ Also you have a chat where you can send messages to your friends.<br/>
 <img src=".github/gif2.gif">
 <br/>
 
+> > > > > > > 3afae3f1e42902e7e2382bfb11ea705edbb1f1ae
+
 ## Technology
 
 This project was developed with the following technologies:
@@ -55,6 +59,10 @@ This project was developed with the following technologies:
 - [SocketIO](https://socket.io/)
 
 ## :arrow_forward: How to run
+
+- Fork the project and clone
+- In your project folder, open your terminal and run `yarn install or npm install` to install dependencies
+- Be sure you have Postgres installed.
 - Fork the project and clone
 - In your project folder, open your terminal and run `yarn install or npm install` to install dependencies
 - Be sure that you have Postgres installed
