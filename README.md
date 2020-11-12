@@ -35,7 +35,7 @@
 
 MeetApp is a video conference made with NodeJS.<br>
 
-# Features
+## Features
 
 On MeetApp you can create rooms, also you can copy the room ID and share with people that you want in your room.<br/>
 <img src=".github/gif1.gif">
