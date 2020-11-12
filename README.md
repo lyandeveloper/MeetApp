@@ -34,8 +34,6 @@
 ## 💻 Project
 
 MeetApp is a video conference made with NodeJS.<br>
-<<<<<<< HEAD
-=======
 
 # Features
 
@@ -46,8 +44,6 @@ On MeetApp you can create rooms, also you can copy the room ID and share with pe
 Also you have a chat where you can send messages to your friends.<br/>
 <img src=".github/gif2.gif">
 <br/>
-
-> > > > > > > 3afae3f1e42902e7e2382bfb11ea705edbb1f1ae
 
 ## Technology
 
@@ -62,12 +58,9 @@ This project was developed with the following technologies:
 
 - Fork the project and clone
 - In your project folder, open your terminal and run `yarn install or npm install` to install dependencies
-- Be sure you have Postgres installed.
-- Fork the project and clone
-- In your project folder, open your terminal and run `yarn install or npm install` to install dependencies
-- Be sure that you have Postgres installed
+- Be sure you have wherever SQL Databases installed. Redis is required too.
 - Then in your project folder copy the `.env.example` content, and create a `.env` file then paste the content.
-- Create a new database with wherever name you want, then fill the `.env` file with required fields.
+- Create a new database with wherever name you want, then fill the `.env` file with your database info.
 - In your terminal run `yarn sequelize db:migrate` or `npm sequelize db:migrate` to run the database migrations.
 - Then run `yarn dev or npm dev` to start the server and in another terminal run `yarn peer or npm peer` to start peer server.
 
