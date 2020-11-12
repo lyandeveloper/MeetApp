@@ -59,7 +59,6 @@ This project was developed with the following technologies:
 - Fork the project and clone
 - In your project folder, open your terminal and run `yarn install or npm install` to install dependencies
 - Be sure you have wherever SQL Databases installed. Redis is required too.
-- Then in your project folder copy the `.env.example` content, and create a `.env` file then paste the content.
 - Create a new database with wherever name you want, then fill the `.env` file with your database info.
 - In your terminal run `yarn sequelize db:migrate` or `npm sequelize db:migrate` to run the database migrations.
 - Then run `yarn dev or npm dev` to start the server and in another terminal run `yarn peer or npm peer` to start peer server.
